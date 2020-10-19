@@ -1,13 +1,13 @@
 # SotF
 Permutation generator
 
-Script accepts an input pattern in the form of ABCDEFGH, where A = first variable ... H = eigth variable
+Script accepts an input pattern in the form of ABCDEFGH, where A = first variable ... H = eigth variable.
 
-Permutation is generated via 0-9 numbers, non-repeating
-Numbers used within the pattern are excluded from the permutation
-Pattern can implement duplicate variables
+Permutation is generated via 0-9 numbers, non-repeating. 
+Numbers used within the pattern are excluded from the permutation. 
+Pattern can implement duplicate variables. 
 
-Current limitaion is 8 digit length
+Current limitaion is 8 digit length. 
 
 Example:
 
