@@ -11,6 +11,7 @@ Current limitaion is 8 digit length
 
 Example:
 
+```
 ./SotF -p 01AABB67
 01223367
 01224467
@@ -19,3 +20,4 @@ Example:
 01998867
 
 30 combinations created
+```
