@@ -1,0 +1,2 @@
+# SotF
+Permutation generator
