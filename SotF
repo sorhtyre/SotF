@@ -1,0 +1,56 @@
+#!/usr/bin/env python
+
+import argparse
+import itertools
+
+def test_val(val, arr):
+	if val.isalpha():
+		if val == 'A':
+			return(arr[0])
+		elif val == 'B':
+			return(arr[1])
+		elif val == 'C':
+			return(arr[2])
+		elif val == 'D':
+			return(arr[3])
+		elif val == 'E':
+			return(arr[4])
+		elif val == 'F':
+			return(arr[5])
+		elif val == 'G':
+			return(arr[6])
+		elif val == 'H':
+			return(arr[7])
+	else:
+		return(val)
+
+parser = argparse.ArgumentParser(description='Create combo permutation.')
+
+parser.add_argument('-p', type=str, dest='pattern',
+                    help='pattern of permutation')
+
+args = parser.parse_args()
+pattern = args.pattern.upper()
+
+combo = '0123456789'
+unique = [] 
+
+for x in pattern:
+	if x.isdigit():
+		combo = combo.replace(x, '') 
+	elif x.isalpha():
+		if x not in unique: 
+			unique.append(x)
+
+pos = len(unique)
+
+count = 0
+
+for x in itertools.permutations(combo, pos):
+	count+=1
+	print(test_val(pattern[0], x) + test_val(pattern[1], x) + 
+	test_val(pattern[2], x) + test_val(pattern[3], x) + 
+	test_val(pattern[4], x) + test_val(pattern[5], x) + 
+	test_val(pattern[6], x) + test_val(pattern[7], x))
+
+print("\r\n" + str(count) + " combinations created")
